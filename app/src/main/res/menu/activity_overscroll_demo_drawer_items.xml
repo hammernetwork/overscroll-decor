@@ -36,6 +36,11 @@
             android:title="ViewPager Demo"
             />
         <item
+            android:id="@+id/drawer_item_viewpager2_demo"
+            android:icon="@drawable/ic_view_pager"
+            android:title="ViewPager2 Demo"
+            />
+        <item
             android:id="@+id/drawer_item_nested_scrollview_demo"
             android:title="NestedScrollView Demo"
             />
