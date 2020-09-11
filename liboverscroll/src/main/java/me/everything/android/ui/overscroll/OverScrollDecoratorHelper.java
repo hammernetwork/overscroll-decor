@@ -11,11 +11,13 @@ import android.widget.HorizontalScrollView;
 import android.widget.ListView;
 import android.widget.ScrollView;
 
+import androidx.viewpager2.widget.ViewPager2;
 import me.everything.android.ui.overscroll.adapters.AbsListViewOverScrollDecorAdapter;
 import me.everything.android.ui.overscroll.adapters.HorizontalScrollViewOverScrollDecorAdapter;
 import me.everything.android.ui.overscroll.adapters.RecyclerViewOverScrollDecorAdapter;
 import me.everything.android.ui.overscroll.adapters.ScrollViewOverScrollDecorAdapter;
 import me.everything.android.ui.overscroll.adapters.StaticOverScrollDecorAdapter;
+import me.everything.android.ui.overscroll.adapters.ViewPager2OverScrollDecorAdapter;
 import me.everything.android.ui.overscroll.adapters.ViewPagerOverScrollDecorAdapter;
 
 public class OverScrollDecoratorHelper {
@@ -85,6 +87,19 @@ public class OverScrollDecoratorHelper {
 
     public static IOverScrollDecor setUpOverScroll(ViewPager viewPager) {
         return new HorizontalOverScrollBounceEffectDecorator(new ViewPagerOverScrollDecorAdapter(viewPager));
+    }
+
+    public static IOverScrollDecor setUpOverScroll(ViewPager2 viewPager) {
+        RecyclerView child = (RecyclerView)viewPager.getChildAt(0);
+
+        switch (viewPager.getOrientation()) {
+            case ViewPager2.ORIENTATION_HORIZONTAL:
+                return new HorizontalOverScrollBounceEffectDecorator(new RecyclerViewOverScrollDecorAdapter(child));
+            case ViewPager2.ORIENTATION_VERTICAL:
+                return new VerticalOverScrollBounceEffectDecorator(new RecyclerViewOverScrollDecorAdapter(child));
+            default:
+                throw new IllegalArgumentException("orientation");
+        }
     }
 
 }

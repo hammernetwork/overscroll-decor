@@ -17,6 +17,7 @@ import me.everything.overscrolldemo.view.NestedScrollViewDemoFragment;
 import me.everything.overscrolldemo.view.RecyclerViewDemoFragment;
 import me.everything.overscrolldemo.view.RecyclerViewStaggeredGridDemoFragment;
 import me.everything.overscrolldemo.view.ScrollViewDemoFragment;
+import me.everything.overscrolldemo.view.ViewPager2DemoFragment;
 import me.everything.overscrolldemo.view.ViewPagerDemoFragment;
 
 public class OverScrollDemoActivity extends AppCompatActivity
@@ -81,6 +82,9 @@ public class OverScrollDemoActivity extends AppCompatActivity
                 break;
             case R.id.drawer_item_viewpager_demo:
                 replaceMainFragment(new ViewPagerDemoFragment(),R.string.viewpager_demo_title);
+                break;
+            case R.id.drawer_item_viewpager2_demo:
+                replaceMainFragment(new ViewPager2DemoFragment(),R.string.viewpager2_demo_title);
                 break;
             case R.id.drawer_item_nested_scrollview_demo:
                 replaceMainFragment(new NestedScrollViewDemoFragment(), R.string.nested_scrollview_demo_title);
