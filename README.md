@@ -1,3 +1,7 @@
+# Forked from https://github.com/EverythingMe/overscroll-decor
+
+What added:
+- support ViewPager2
 
 # Over-Scroll Support For Android's RecyclerView, ListView, GridView, ScrollView ...
  
