@@ -13,10 +13,12 @@ The core effect classes are loose-[decorators](https://en.wikipedia.org/wiki/Dec
 
 ![RecyclerView demo](recyclerview_demo.gif)
 
+<!--- 
 # Gradle Dependency
 
 Add the following to your module's `build.gradle` file:
 
+Not actual version
 ```groovy
 dependencies {
     // ...
@@ -24,6 +26,7 @@ dependencies {
     compile 'me.everything:overscroll-decor-android:1.1.0'
 }
 ```
+ --->
 
 # Usage
 
